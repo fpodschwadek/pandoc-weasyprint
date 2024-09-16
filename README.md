@@ -1,6 +1,6 @@
 # Pandoc/Weasyprint
 
-This is a utility container image based on the [pandoc/latex] image with the [alpine wasyprint package](https://pkgs.alpinelinux.org/package/edge/community/x86/weasyprint) and some additional fonts installed (using the same fonts as the [docker-wkhtmltopdf image by Surnet](https://github.com/Surnet/docker-wkhtmltopdf/blob/master/Dockerfile-alpine.template)).
+This is a utility container image based on the [pandoc/latex image](https://hub.docker.com/r/pandoc/latex) with the [alpine wasyprint package](https://pkgs.alpinelinux.org/package/edge/community/x86/weasyprint) and some additional fonts installed (using the same fonts as the [docker-wkhtmltopdf image by Surnet](https://github.com/Surnet/docker-wkhtmltopdf/blob/master/Dockerfile-alpine.template)).
 
 What I wanted was the option to use CSS to quickly format the PDF output -- of course that's probably possible with LaTex (probably much better and more fine-grained) but so far I lacked the time to get into that, while I work with CSS for almost twenty years by now.
 
