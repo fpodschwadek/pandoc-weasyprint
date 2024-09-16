@@ -1,8 +1,8 @@
 # Dockerfile for pandoc container weasyprint.
-# PROGRESS_NO_TRUNC=1 docker build -f Dockerfile -t fpod/docker-weasyprint --progress plain --no-cache .
+# PROGRESS_NO_TRUNC=1 docker build -f Dockerfile -t fpod/pandoc-weasyprint --progress plain --no-cache .
 # or (if you don't expect any errors during build):
-# docker build -f Dockerfile -t fpod/docker-weasyprint --no-cache .
-# docker push fpod/docker-weasyprint
+# docker build -f Dockerfile -t fpod/pandoc-weasyprint --no-cache .
+# docker push fpod/pandoc-weasyprint
 FROM pandoc/latex:3
 
 RUN apk add --update --no-cache \
