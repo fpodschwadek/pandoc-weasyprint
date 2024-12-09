@@ -9,7 +9,7 @@ This thing is in no way perfect, but it allows me to make decently layouted PDFs
 To use this container, you can mount a directory containing your markdown file and a CSS file to the container. For example, from your working folder containing these files you could run the following command:
 
 ```bash
-docker run --rm -v ./:/data --user $(id -u):$(id -g) fpod/docker-weasyprint README.md --pdf-engine=weasyprint --css=/data/styles.css -o talk.pdf
+docker run --rm -v ./:/data --user $(id -u):$(id -g) fpod/pandoc-weasyprint README.md --pdf-engine=weasyprint --css=/data/styles.css -o talk.pdf
 ```
 
 Note that you need to replace `README.md`, `styles.css` and `talk.pdf` with your own filenames.
