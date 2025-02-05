@@ -8,19 +8,26 @@ FROM pandoc/latex:3
 RUN apk add --update --no-cache \
         fontconfig \
         freetype \
+        gcc \
+        libc-dev \
+        lua5.4-dev \
+        luarocks \
+        pcre-dev \
         ttf-dejavu \
         ttf-droid \
         ttf-freefont \
         ttf-liberation \
         weasyprint \
     ; \
-    # more fonts
+    # More fonts.
     apk add --no-cache --virtual .build-deps \
         msttcorefonts-installer \
     ; \
-    # Install microsoft fonts
+    # Install microsoft fonts.
     update-ms-fonts; \
     fc-cache -f; \
+    # Install Lua packages.
+    luarocks-5.4 install lrexlib-pcre; \
     # Clean up when done.
     rm -rf /tmp/*; \
     apk del .build-deps
